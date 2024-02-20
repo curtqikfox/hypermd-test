@@ -1,38 +1,58 @@
-.App {
-  text-align: center;
+/* This line will hide the flashing of the original text 
+area that the hypermd component mounts to */
+
+:root {
+  --toolbar-button-height: 1.5em;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#main-editor {
+  display: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.editor-toolbar {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  padding: .5em;
+}
+
+.toolbar-button {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 1.5em;
+  height: var(--toolbar-button-height);
+  margin-right: .5em;
+
+  &:hover {
+    background-color: lightgrey;
+  }
 }
 
-.App-link {
-  color: #61dafb;
+.insert-button {
+  width: 1.5em;
+  height: 1.5em;
+  margin-right: .3em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.insert-button-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: .2em;
+  height: var(--toolbar-button-height);
+  margin-right: .5em;
+
+  &:hover {
+    background-color: lightgrey;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+
+.toolbar-separator {
+  width: 0.1em;
+  height: 1.5em;
+  background-color: lightgrey;
+  margin-right: .5em;
 }

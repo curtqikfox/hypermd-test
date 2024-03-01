@@ -1,0 +1,119 @@
+
+.editor-toolbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  padding: .5em;
+  border-bottom: 1px solid var(--button-hover);
+  height: var(--toolbar-height);
+}
+
+.toolbar-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--toolbar-button-height);
+  margin-right: .4em;
+  padding: .2em;
+  border-radius: var(--toolbar-button-radius);
+  cursor: default;
+
+  &:hover {
+    background-color: var(--button-hover);
+  }
+}
+
+.insert-button {
+  width: 1.3em;
+  height: 1.3em;
+  margin-right: .4em;
+}
+
+.insert-button-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: .2em;
+  height: var(--toolbar-button-height);
+  margin-right: .5em;
+
+  &:hover {
+    background-color: var(--button-hover);
+  }
+}
+
+.toolbar-separator {
+  width: 0.1em;
+  height: var(--toolbar-separator-height);
+  background-color: var(--button-hover);
+  margin-right: .5em;
+}
+
+.toolbar-button.dropdown {
+  position: relative;
+}
+
+.dropdown-option:hover {
+  background-color: var(--dropdown-bg-hover);
+}
+
+.dropdown-option {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.dropdown-label {
+  white-space: nowrap;
+  margin: 0;
+  padding-left: 0;
+  font-size: .9em;
+}
+
+.dropdown-label-no-icon {
+  padding: 10px 12px;
+}
+
+.dropdown-label-no-icon:hover {
+  background-color: var(--dropdown-bg-hover);
+}
+
+.dropdown-icon {
+  padding: 10px;
+  padding-right: 8px;
+  width: 1.35em;
+  height: 1.35em;
+}
+
+.carat-icon {
+  height: 1.2em;
+  width: 1.2em;
+  padding-left: .3em;
+}
+
+.toolbar-button.dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--dropdown-bg);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  top: 1.5em;
+  left: 0;
+}
+
+.toolbar-button.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.toolbar-button.dropdown .dropdown-content a {
+  color: var(--text);
+  text-decoration: none;
+  display: block;
+}
+
+#fileInput {
+  display: none;
+}

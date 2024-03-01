@@ -3,18 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "codemirror": "^5.65.4",
-    "hypermd": "^0.3.11",
-    "qik-hypermd-fork": "^3.11.2",
+    "codemirror": "^5.65.14",
+    "qik-hypermd-fork": "^3.11.8",
     "react": "^16.4.0",
     "react-dom": "^16.14.0",
     "react-scripts": "1.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build; npm run build-submodule",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build-submodule": "cd src/qik-hyper-md && npm run build"
   },
   "eslintConfig": {
     "extends": [

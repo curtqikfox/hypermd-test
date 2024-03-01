@@ -2,87 +2,49 @@
 area that the hypermd component mounts to */
 
 :root {
-  --toolbar-button-height: 1.5em;
+  --text: var(--text-light);
+  --text-light: #000;
+  --text-dark: white;
+  --text-secondary: var(--text-secondary-light);
+  --text-secondary-light: #999;
+  --text-secondary-dark: #333;
+
+  /* Toolbar */
+  --toolbar-height: 2em;
+  --toolbar-separator-height: 1.5em;
+  --toolbar-button-height: 1.3em;
+  --toolbar-button-radius: 6px;
+  --button-hover: #e1e1e1;
+
+  --dropdown-bg: #f9f9f9;
+  --dropdown-bg-hover: #f1f1f1;
+}
+
+html,
+body,
+#root,
+#App {
+  height: 100%;
+  overflow: hidden;
+}
+
+.CodeMirror {
+  height: calc(100vh - 1.5em);
+  /* height: 100%; */
 }
 
 #main-editor {
   display: none;
 }
 
-.editor-toolbar {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: start;
-  padding: .5em;
-}
-
-.toolbar-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* width: 1.5em; */
-  height: var(--toolbar-button-height);
-  margin-right: .5em;
-
-  &:hover {
-    background-color: lightgrey;
-  }
-}
-
-.insert-button {
-  width: 1.5em;
-  height: 1.5em;
-  margin-right: .3em;
-}
-
-.insert-button-wrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: .2em;
-  height: var(--toolbar-button-height);
-  margin-right: .5em;
-
-  &:hover {
-    background-color: lightgrey;
-  }
-}
-
-.toolbar-separator {
-  width: 0.1em;
-  height: 1.5em;
-  background-color: lightgrey;
-  margin-right: .5em;
-}
-
-.toolbar-button.dropdown {
-  position: relative;
-}
-
-.toolbar-button.dropdown .dropdown-content {
+.cm-formatting-list-ul {
   display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  top: 1.5em;
-  left: 0;
 }
 
-.toolbar-button.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-.toolbar-button.dropdown .dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.toolbar-button.dropdown .dropdown-content a:hover {
-  background-color: #f1f1f1;
+.cm-s-hypermd-light img.hmd-image {
+  vertical-align: middle;
+  width: 60vw;
+  max-width: 60vw;
+  height: 50%;
+  max-height: 30vh;
 }

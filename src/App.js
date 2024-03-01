@@ -43,9 +43,12 @@ export default function App() {
     const editor = HyperMD.fromTextArea(textNode.current, {});
     HyperMD.switchToHyperMD(editor, suggestedEditorConfig);
   }, []);
+
   return (
     <div id="App">
-      <div id="toolbar-wrapper"></div>
+      <div id="toolbar-wrapper">
+        <input id="fileInput" type="file" /*style={{ display: "none" }}*/ />
+      </div>
       <textarea id="main-editor" ref={textNode} />
     </div>
   );

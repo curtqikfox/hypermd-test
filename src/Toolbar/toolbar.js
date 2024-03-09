@@ -268,7 +268,6 @@ function createInsertButton(cm) {
     optionLabel.classList.add("dropdown-label");
     optionLabel.innerHTML = dropdownOptions[i];
     optionWrapper.onclick = function (headerLevel) {
-      console.log(optionLabel + " Clicked")
       return function (e) {
         switch (headerLevel) {
           case kCodeBlock:

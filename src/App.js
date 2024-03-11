@@ -29,18 +29,20 @@ import './App.css';
 
 var suggestedEditorConfig = {
   lineNumbers: false,
-  lineWrapping: false,
+  lineWrapping: true,
   theme: "hypermd-light",
   mode: "text/x-hypermd",
   tabSize: 4,
-  autoCloseBrackets: false,
+  autoCloseBrackets: true,
+  matchBrackets: true,
   foldGutter: false,
 };
 
 export default function App() {
   const textNode = React.useRef();
   React.useEffect(() => {
-    const editor = HyperMD.fromTextArea(textNode.current, {});
+    const editor = HyperMD.fromTextArea(textNode.current, {
+    });
     HyperMD.switchToHyperMD(editor, suggestedEditorConfig);
   }, []);
 

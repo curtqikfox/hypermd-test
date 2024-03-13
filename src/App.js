@@ -23,10 +23,6 @@ import './Toolbar/toolbar.js';
 
 import './App.css';
 
-// import BoldSVG from './images/bold.svg';
-
-// import "./styles.css";
-
 var suggestedEditorConfig = {
   lineNumbers: false,
   lineWrapping: true,
@@ -55,6 +51,3 @@ export default function App() {
     </div>
   );
 }
-
-// const rootElement = document.getElementById("root");
-// ReactDOM.render(<App />, rootElement);

@@ -119,13 +119,13 @@
   left: 0;
   display: flex;
   flex-direction: column;
-
+  height: 13em;
+  overflow-y: auto;
 }
 
 .hmd-hidden-token .inline-dropdown-content {
   display: none;
 }
-
 
 .toolbar-button.dropdown:hover .dropdown-content {
   display: block;
@@ -148,21 +148,31 @@
 }
 
 .light-icon {
-  fill:currentColor; /* Inherit color from parent element */
+  fill: currentColor;
+  /* Inherit color from parent element */
   height: 24px;
   width: 24px;
-  display: inline-block; /* Ensures inline behavior */
+  display: inline-block;
+  /* Ensures inline behavior */
 }
 
 #fileInput {
   display: none;
 }
 
-.CodeMirror pre.CodeMirror-line, .CodeMirror pre.CodeMirror-line-like {
+.CodeMirror pre.CodeMirror-line,
+.CodeMirror pre.CodeMirror-line-like {
   position: revert !important;
 }
 
 .CodeMirror-selected {
   background: #ff9f8a !important;
   opacity: 0.4;
+}
+
+.CodeMirror-wrap pre.CodeMirror-line,
+.CodeMirror-wrap pre.CodeMirror-line-like {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  word-break: break-all !important;
 }
